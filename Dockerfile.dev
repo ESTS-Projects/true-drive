@@ -1,7 +1,8 @@
-FROM eoussama/truedrive_core_dev:0.0.3
+FROM node:18-alpine
+RUN apk add --update ffmpeg
 
 WORKDIR /app
-RUN mv /app /core
 COPY . /app
+RUN chmod +x /app/core/truedrive
 
 CMD ["/bin/sh"]
