@@ -1,0 +1,7 @@
+FROM eoussama/truedrive_core_dev:0.0.3
+
+WORKDIR /app
+RUN mv /app /core
+COPY . /app
+
+CMD ["/bin/sh"]
